@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Odd or Even Checker</title>
+        <style>
+            body {
+                background-color: black;
+                align-items: center;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center; 
+                height: 100vh; 
+                margin: 0; 
+            }
+            
+            h1 {
+                color: cadetblue;
+                text-shadow: 1px 1px dodgerblue; /* Correct the text-shadow property */
+                font-family: sans-serif;
+            }
+            
+            label {
+                color: deepskyblue;
+                text-shadow: 1px 1px rgb(30, 255, 199); /* Correct the text-shadow property */
+            }
+            
+            .hub {
+                width: 170px;
+                height: 40px;
+                font-size: 20px;
+                font-weight: 700;
+                background-color: magenta;
+                cursor: pointer;
+                border: none;
+                border-radius: 20px;
+                box-shadow: 0 0 20px magenta, 0 0 60px magenta;
+            }
+            
+            #demo {
+                color: aquamarine;
+                text-align:left; 
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="container">
+            <h1 style="size:350px;">ODD OR EVEN CHECKER</h1>
+            
+            <label for="number">Enter a number: </label>
+            <input type="number" id="no">
+            <button class="hub" onclick="perform()">Check</button> 
+
+        </div>
+
+        <div id="demo"></div>
+        <script>
+            function perform() {
+                let n = document.getElementById('no').value;
+                let ans = (n % 2 == 0) ? 'Even number' : 'Odd number';
+                document.getElementById('demo').innerHTML = n + ' is '  + ans + '.';
+            }
+        </script>
+    </body>
+</html>
